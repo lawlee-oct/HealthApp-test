@@ -1,0 +1,138 @@
+@import "../../styles/variables.css";
+
+/* Full width container */
+.fullWidthContainer {
+    width: 100%;
+    background: var(--dark-600);
+}
+
+.pageContainer {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Top row: two columns */
+.topRow {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 316px;
+    max-width: 100%;
+}
+
+/* Main grid layout */
+.mainGrid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 40px;
+    margin-top: 56px;
+}
+
+/* Main visual section */
+.mainVisual {
+    position: relative;
+    background: var(--dark-600);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Chart container */
+.chartContainer {
+    background: var(--dark-600);
+    padding: 16px;
+}
+
+/* Hexagon menu row */
+.hexagonMenuRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 84px;
+    padding: 24px 0;
+}
+
+/* Meal history row */
+.mealGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 0 24px;
+}
+
+.mealCard {
+    position: relative;
+}
+
+.mealLabel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-300);
+    color: var(--white-light);
+    padding: 7px 14px;
+    font-size: 15px;
+}
+
+.buttonContainer {
+    text-align: center;
+    margin: 28px 0;
+}
+
+.mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.progressCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progressSvg {
+    transform: rotate(-90deg);
+}
+
+.progressBg {
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.25);
+}
+
+.progressBar {
+    fill: transparent;
+    stroke: var(--white-light);
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.progressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white-light);
+    width: 100%;
+}
+
+.progressDate {
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.progressPercent {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+/* Add at the bottom of your CSS file */
+:global(.topButton) {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+}
